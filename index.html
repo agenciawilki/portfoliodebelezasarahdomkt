@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarah Nasiaseno | Design e vídeo para beleza e estética</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#000;--mute:#6b6b6b;--line:#dcdcdc;--serif:"Instrument Serif","Times New Roman",serif;--sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--pad:clamp(20px,5vw,72px);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--fg:#fff;--mute:#a0a0a0;--line:#333}}
+:root[data-theme="dark"]{--bg:#000;--fg:#fff;--mute:#a0a0a0;--line:#333}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px var(--pad);flex-wrap:wrap}
+header b{font:400 1.5rem/1 var(--serif)}
+nav{display:flex;gap:clamp(14px,3vw,32px);font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--fg)}
+.hero{padding:clamp(48px,10vw,140px) var(--pad) clamp(56px,9vw,120px)}
+h1{font:400 clamp(3.4rem,15.5vw,14rem)/.86 var(--serif);letter-spacing:-.035em;margin:0}
+h1 span{display:block;overflow:hidden}
+h1 i{display:block;font-style:normal;animation:up 1.1s cubic-bezier(.2,.7,.1,1) both}
+h1 span:nth-child(2) i{animation-delay:.12s;padding-left:clamp(0px,9vw,150px)}
+@keyframes up{from{transform:translateY(105%)}}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-top:clamp(36px,6vw,80px);border-top:1px solid var(--fg);padding-top:24px}
+.hero-foot p{margin:0;max-width:34ch;font:400 clamp(1.4rem,2.6vw,2.1rem)/1.2 var(--serif)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border:1px solid var(--fg);border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;transition:background .2s,color .2s}
+.btn.solid{background:var(--fg);color:var(--bg)}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btn.solid:hover{background:transparent;color:var(--fg)}
+section{padding:clamp(56px,9vw,120px) var(--pad)}
+.dark{background:var(--fg);color:var(--bg);--line:color-mix(in srgb,var(--bg) 25%,transparent);--mute:color-mix(in srgb,var(--bg) 65%,transparent)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:clamp(28px,5vw,56px)}
+h2{font:400 clamp(2.4rem,6.5vw,5.6rem)/.95 var(--serif);letter-spacing:-.025em;margin:0}
+.head p{margin:0;color:var(--mute);max-width:48ch}
+h3{font:400 1.7rem/1.1 var(--serif);margin:clamp(36px,5vw,64px) 0 18px;padding-top:14px;border-top:1px solid var(--line)}
+h3 small{font:400 .95rem var(--sans);color:var(--mute);margin-left:12px}
+.g{display:grid;gap:clamp(10px,1.6vw,20px)}
+.g button{all:unset;cursor:zoom-in;display:block;overflow:hidden;background:#111}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.g button:hover img{transform:scale(1.03)}
+.g button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.mr{grid-template-columns:repeat(6,1fr)}
+.mr .p{grid-column:span 2;aspect-ratio:4/5}
+.mr .w{grid-column:span 3;aspect-ratio:16/9}
+.gk{grid-template-columns:repeat(6,1fr)}
+.gk .w{grid-column:span 3;aspect-ratio:16/9}
+.gk .w2{grid-column:span 6;aspect-ratio:16/8}
+.k{grid-template-columns:repeat(5,1fr)}
+.k button{aspect-ratio:4/5}
+.pl{grid-template-columns:repeat(2,1fr)}
+.pl button{aspect-ratio:16/9}
+.reels{display:flex;gap:clamp(10px,1.6vw,20px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;margin:0 calc(var(--pad)*-1);padding-inline:var(--pad);scrollbar-width:thin}
+.reel{flex:0 0 clamp(190px,22vw,290px);aspect-ratio:9/16;scroll-snap-align:start;position:relative;background:#111;cursor:pointer;overflow:hidden}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel::after{content:"";position:absolute;right:12px;bottom:12px;width:34px;height:34px;border-radius:50%;background:#fff;clip-path:polygon(0 0,100% 50%,0 100%);transform:scale(.55);opacity:.9;transition:opacity .2s}
+.reel.on::after{opacity:0}
+.note{color:var(--mute);font-size:.9rem;margin:8px 0 0}
+.contact{text-align:left}
+.contact h2{font-size:clamp(3rem,10vw,9rem);max-width:12ch}
+.contact .btns{margin-top:40px}
+footer{padding:28px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--mute);font-size:.9rem}
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px);max-height:94vh;overflow:visible}
+dialog::backdrop{background:rgba(0,0,0,.88)}
+dialog img{max-height:92vh;width:auto;margin:auto;object-fit:contain}
+@media (max-width:860px){.head{grid-template-columns:1fr}.mr .p{grid-column:span 3}.mr .w{grid-column:span 6}.gk .w{grid-column:span 6}.k{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad)*-1);padding-inline:var(--pad)}.k button{flex:0 0 68%;scroll-snap-align:start}.pl{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){h1 i{animation:none}html{scroll-behavior:auto}.g img{transition:none}}
+</style>
+</head>
+<body>
+<header>
+<b>Sarah Nasiaseno</b>
+<nav><a href="#destaques">Destaques</a><a href="#social">Social media</a><a href="#educacao">Educação</a><a href="#cilios">Cílios</a><a href="#videos">Bronzeamento</a><a href="#contato">Contato</a></nav>
+</header>
+
+<main>
+<div class="hero">
+<h1><span><i>Sarah</i></span><span><i>Nasiaseno</i></span></h1>
+<div class="hero-foot">
+<p>Design e vídeo para marcas de beleza, estética e bem-estar.</p>
+<div class="btns"><a class="btn solid" href="https://wa.me/5511918472128" target="_blank" rel="noopener">Chamar no WhatsApp</a><a class="btn" href="https://instagram.com/asarahdomkt" target="_blank" rel="noopener">@asarahdomkt</a></div>
+</div>
+</div>
+
+<section class="dark" id="destaques">
+<div class="head"><h2>Grandes nomes dos cabeleireiros</h2><p>Materiais criados para Marcos Riégel, hairstylist e especialista em loiros, e para a Grankera Professional, marca de cosméticos capilares.</p></div>
+
+<h3>Marcos Riégel <small>Blond Creative, mentoria de mechas</small></h3>
+<div class="g mr">
+<button class="p"><img src="assets/ag1.jpg" alt="Post Agenda aberta da mentoria Blond Creative, com Marcos Riégel"></button>
+<button class="w"><img src="assets/mr1.jpg" alt="Capa da apresentação Blond Creative, mentoria de mechas"></button>
+<button class="p"><img src="assets/ag5.jpg" alt="Post com os 4 pilares da mentoria: visagismo, colorimetria, cosmetologia e geometria"></button>
+<button class="w"><img src="assets/mr6.jpg" alt="Slide com colagem de modelos reais atendidas na mentoria"></button>
+<button class="p"><img src="assets/ag8.jpg" alt="Post de chamada para a mentoria Blond Creative"></button>
+<button class="p"><img src="assets/ag6.jpg" alt="Post sobre os processos acompanhados na mentoria: castanho iluminado, loiro médio e super blond"></button>
+</div>
+
+<h3>Grankera Professional <small>Manual de produtos e apresentação da marca</small></h3>
+<div class="g gk">
+<button class="w"><img src="assets/gk1.jpg" alt="Capa do manual de produtos Grankera Professional"></button>
+<button class="w"><img src="assets/gkL.jpg" alt="Linha de produtos Grankera Professional sobre fundo preto"></button>
+<button class="w2" style="aspect-ratio:1140/255"><img src="assets/gkM.jpg" alt="Modelos com o sérum Grankera e fachada da marca na feira"></button>
+</div>
+</section>
+
+<section id="social">
+<div class="head"><h2>Social media</h2><p>Posts e carrosséis para Kelly Marazzo, estética avançada, com linguagem próxima da paciente e visual limpo.</p></div>
+<div class="g k">
+<button><img src="assets/k1.jpg" alt="Post Você diz que está velha demais pra ser vaidosa, de Kelly Marazzo"></button>
+<button><img src="assets/k2.jpg" alt="Post É isso que te faz chutar o balde, de Kelly Marazzo"></button>
+<button><img src="assets/k3.jpg" alt="Post de antes e depois do Método Kel Sculpt, resultado da primeira sessão"></button>
+<button><img src="assets/k4.jpg" alt="Post Emagrecimento com sofrimento é o que mais te engorda"></button>
+<button><img src="assets/k5.jpg" alt="Post de antes e depois do Método Kel Sculpt, sem cirurgia"></button>
+</div>
+</section>
+
+<section id="educacao" style="padding-top:0">
+<div class="head"><h2>Material educacional</h2><p>Apresentação do curso de especialização em remoção de estrias da Paloma Alves: conteúdo técnico organizado para ser lido com calma.</p></div>
+<div class="g pl">
+<button><img src="assets/pl1.jpg" alt="Capa do curso de especialização em remoção de estrias"></button>
+<button><img src="assets/pl3.jpg" alt="Boas-vindas ao curso Estrias, Paloma Alves"></button>
+<button><img src="assets/pl28.jpg" alt="Página de resultados do curso de remoção de estrias"></button>
+<button><img src="assets/pl29.jpg" alt="Página sobre biossegurança e ética no curso"></button>
+</div>
+</section>
+
+<section id="cilios">
+<div class="head"><h2>Cílios</h2><p>Reels para lash designer: bastidores do atendimento, antes e depois e conversa direta com a cliente. Toque ou passe o mouse para ver uma prévia.</p></div>
+<div class="reels">
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/d1.jpg" src="assets/d1.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/d2.jpg" src="assets/d2.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/d3.jpg" src="assets/d3.mp4"></video></div>
+</div>
+<p class="note">Prévias de 6 segundos, sem áudio.</p>
+</section>
+
+<section class="dark" id="videos">
+<div class="head"><h2>Bronzeamento</h2><p>Reels de edição rápida para o Studio Barletta, de bronzeamento. Toque ou passe o mouse para ver uma prévia.</p></div>
+<div class="reels">
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b1.jpg" src="assets/b1.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b2.jpg" src="assets/b2.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b3.jpg" src="assets/b3.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b4.jpg" src="assets/b4.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b5.jpg" src="assets/b5.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b6.jpg" src="assets/b6.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b7.jpg" src="assets/b7.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/b8.jpg" src="assets/b8.mp4"></video></div>
+<div class="reel"><video muted loop playsinline preload="none" poster="assets/d4.jpg" src="assets/d4.mp4"></video></div>
+</div>
+<p class="note">Prévias de 6 segundos, sem áudio. Os vídeos completos estão no Instagram.</p>
+</section>
+
+<section class="contact" id="contato">
+<h2>Vamos criar o próximo?</h2>
+<div class="btns"><a class="btn solid" href="https://wa.me/5511918472128" target="_blank" rel="noopener">WhatsApp (11) 91847-2128</a><a class="btn" href="https://instagram.com/asarahdomkt" target="_blank" rel="noopener">@asarahdomkt</a></div>
+</section>
+</main>
+
+<footer><span>Sarah Nasiaseno</span><span>Design e vídeo para beleza e estética</span></footer>
+
+<dialog id="lb"><img alt=""></dialog>
+<script>
+(function(){
+var lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.g button').forEach(function(b){b.addEventListener('click',function(){var i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lb.showModal()})});
+lb.addEventListener('click',function(){lb.close()});
+document.querySelectorAll('.reel').forEach(function(r){
+var v=r.querySelector('video');
+function on(){r.classList.add('on');var p=v.play();if(p&&p.catch)p.catch(function(){})}
+function off(){r.classList.remove('on');v.pause()}
+r.addEventListener('mouseenter',on);r.addEventListener('mouseleave',off);
+r.addEventListener('click',function(){v.paused?on():off()});
+});
+})();
+</script>
+</body>
+</html>
